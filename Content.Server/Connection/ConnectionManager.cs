@@ -242,7 +242,6 @@ namespace Content.Server.Connection
                             ticker.PlayerGameStatuses.TryGetValue(userId, out var status) &&
                             status == PlayerGameStatus.JoinedGame;
             return isAdmin ||
-                   havePriorityJoin || // Corvax-Sponsors
                    wasInGame;
         }
         // Corvax-Queue-End

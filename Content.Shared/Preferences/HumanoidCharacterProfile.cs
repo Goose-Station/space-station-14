@@ -391,13 +391,6 @@ namespace Content.Shared.Preferences
                 speciesPrototype = prototypeManager.Index<SpeciesPrototype>(Species);
             }
 
-            // Corvax-Sponsors-Start: Reset to human if player not sponsor
-            if (speciesPrototype.SponsorOnly && !sponsorPrototypes.Contains(Species))
-            {
-                Species = SharedHumanoidAppearanceSystem.DefaultSpecies;
-                speciesPrototype = prototypeManager.Index<SpeciesPrototype>(Species);
-            }
-            // Corvax-Sponsors-End
 
             var sex = Sex switch
             {
