@@ -412,6 +412,7 @@ namespace Content.Server.GameTicking
 
                 var duration = RoundDuration();
                 var content = Loc.GetString("discord-round-notifications-end",
+                    ("roleId", DiscordRoundEndRole),
                     ("id", RoundId),
                     ("hours", Math.Truncate(duration.TotalHours)),
                     ("minutes", duration.Minutes),
